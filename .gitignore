@@ -1,0 +1,4 @@
+# Untrack folders 
+obj/
+C-files.cbp
+bin/
