@@ -28,20 +28,4 @@ WARN = -Wall \
 SRC_DIR = ./src
 OBJ_DIR = ./src/.obj
 
-.PHONY : test
-test :
-	$(wildcard {SRC_DIR}/*)
 
-# build the source (src) directory
-
-.PHONY : build
-build : clean
-	@printf "\033[38;5;2mBuilding C files\033[0;0;0m \n"
-	@mkdir ${OBJ_DIR}
-	@$(CC) ${SRC_DIR}/main.c -o ${OBJ_DIR}/main.o ${C_FLAGS} ${SAO} ${WARN}
-
-.PHONY : clean
-clean :
-	@printf "\033[38;5;1m Removing files in the directory \
-		\033[0;0;0m \n"
-	@rm -rf ${OBJ_DIR}
